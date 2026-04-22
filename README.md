@@ -70,10 +70,10 @@ npm run build
 ```
 src/
 ├── state/                       Layer 1 — pure JS
-│   ├── catmullRom.js            Spline → Bezier
+│   ├── catmullRom.js            Spline → Bezier, mirror/reverse transforms
 │   ├── dependencyGraph.js       DAG + topological cascade
 │   ├── constraintResolver.js    Scalar + relational soft-wall
-│   ├── patternModel.js          T-shirt: measurements → curves
+│   ├── patternModel.js          T-shirt: measurements → curves, garment topology
 │   └── index.js                 Public PatternState API
 ├── renderer/
 │   ├── RendererContract.js      Layer 2 — the swap point
