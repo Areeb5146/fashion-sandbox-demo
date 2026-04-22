@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Fashion Sandbox — T-Shirt</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- LEFT: Measurements -->
+    <aside class="panel panel-left">
+      <header class="panel-head">
+        <span class="eyebrow">layer 1 · state engine</span>
+        <h2>Measurements</h2>
+      </header>
+      <section class="panel-body" id="measurements"></section>
+    </aside>
+
+    <!-- CENTER: Canvas + footer -->
+    <main class="canvas-area">
+      <header class="canvas-head">
+        <div>
+          <span class="eyebrow">layer 3 · fabric.js renderer</span>
+          <h1>T-Shirt — Front</h1>
+        </div>
+        <div class="actions">
+          <button class="btn active" id="toggleJson">Hide JSON</button>
+          <button class="btn" id="toggleHandles">Show handles</button>
+          <button class="btn" id="resetBtn">Reset</button>
+        </div>
+      </header>
+
+      <div class="canvas-wrap">
+        <canvas id="patternCanvas" width="720" height="720"></canvas>
+        <aside class="json-panel" id="jsonPanel">
+          <header class="json-head">
+            <span class="eyebrow">single source of truth</span>
+            <span class="json-title">state.json</span>
+          </header>
+          <div class="json-body"></div>
+        </aside>
+      </div>
+
+      <footer class="status-strip" id="statusStrip">
+        <span class="status-clamp" id="softWall" hidden>
+          <span class="status-prefix">clamp</span>
+          <span id="softWallMessage">—</span>
+        </span>
+        <span class="status-activity" id="activity">
+          <span class="status-prefix">cascade</span>
+          <span id="activityText" class="status-text">drag a slider or anchor…</span>
+        </span>
+        <span class="status-spacer"></span>
+        <span class="status-perf">
+          <span><b id="perfNodes">—</b>↑</span>
+          <span><b id="perfSkipped">—</b>↓</span>
+          <span><b id="perfCascade">—</b><i>ms</i></span>
+          <span><b id="perfFrame">—</b><i>fps</i></span>
+        </span>
+      </footer>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
